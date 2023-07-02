@@ -16,18 +16,10 @@ class App extends Component {
       [event]: prevState[event] + 1,
     }));
   };
-  // onLeaveFeedback = event => {
-  //   this.setState(prevState => {
-  //     return {
-  //       [event.target.name]: prevState[event.target.name] + 1,
-  //     };
-  //   });
-  // };
 
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
     return Object.values({ good, neutral, bad }).reduce((a, b) => a + b, 0);
-    // return this.state.good + this.state.neutral + this.state.bad;
   };
 
   countPositiveFeedbackPercentage = () => {
